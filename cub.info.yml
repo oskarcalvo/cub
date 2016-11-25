@@ -1,0 +1,7 @@
+name: Campaing url Builder
+type: module
+description: This module helps you to create urls with params that helps to follow in Google Analitycs.
+version: '8.x-2.x-dev'
+core: '8.x'
+package: SEO
+#configure: cub.settings_options
