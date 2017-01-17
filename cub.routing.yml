@@ -1,0 +1,31 @@
+entity.cub.collection:
+  path: '/admin/config/search/cub'
+  defaults:
+    _entity_list: 'cub'
+    _title: 'Configure CUBs'
+  requirements:
+    _permission: 'administer cubs'
+
+entity.cub.add_form:
+  path: '/admin/config/search/cub/add'
+  defaults:
+    _entity_form: 'cub.add'
+    _title: 'Add CUBs'
+  requirements:
+    _permission: 'administer cubs'
+
+entity.cub.edit_form:
+  path: '/admin/config/search/cub/{cub}'
+  defaults:
+    _entity_form: 'cub.edit'
+    _title: 'Edit CUBs'
+  requirements:
+    _permission: 'administer cubs'
+
+entity.cub.delete_form:
+  path: '/admin/config/search/cub/{cub}/delete'
+  defaults:
+    _entity_form: 'cub.detele'
+    _title: 'Delete CUBs'
+  requirements:
+    _permission: 'administer cubs'

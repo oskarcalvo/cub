@@ -1,0 +1,6 @@
+entity.cub.add_form:
+  route_name: 'entity.cub.add_form'
+  title: 'Add Cub'
+  appears_on:
+    - entity.cub.collection
+

@@ -1,0 +1,4 @@
+#Define the administer permissions for the CUB config entity.
+'administer cubs':
+  title: 'Administer cubs'
+  description: Create and edit CUBs.

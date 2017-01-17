@@ -1,0 +1,14 @@
+{
+  "name": "drupal/cub",
+  "type": "drupal-module",
+  "description": "Create urls with params to track throught G.A.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/cub",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/cub",
+    "source": "http://cgit.drupalcode.org/cub"
+  },
+  "require": { }
+}

@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains cub.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cub_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cub module.
+    case 'help.page.cub':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create urls with params to track throught G.A.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cub_theme() {
+  return [
+    'cub' => [
+      'template' => 'cub',
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,9 @@
+
+# Cub menu items definition
+entity.cub.collection:
+  title: 'Cub'
+  route_name: entity.cub.collection
+  description: 'List Cub (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

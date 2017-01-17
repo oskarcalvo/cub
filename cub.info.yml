@@ -1,0 +1,5 @@
+name: Campaign url builder
+type: module
+description: This module allows you to easily add campaign parameters to content URLS, so you can track Custom Campaign in Google Analitycs.
+core: 8.x
+package: SEO
