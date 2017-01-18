@@ -10,7 +10,7 @@ cub.cub.*:
       label: 'Label'
     uuid:
       type: string
-    url:
+    webUrl:
       type: string
       label: ' Website Url'
     source:

@@ -48,12 +48,12 @@ class CubForm extends EntityForm {
       '#disabled' => !$cub->isNew(),
     ];
   
-    $form['url'] = [
+    $form['webUrl'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Website Url'),
       '#maxlength' => 255,
-      '#default_value' => $cub->url(),
-      '#description' => $this->t("The full website URL (e.g. https://www.example.com)."),
+      '#default_value' => $cub->webUrl(),
+      '#description' => $this->t("The full website URL (e.g. https://www.example.com) or an internal path."),
       '#required' => TRUE,
     ];
   

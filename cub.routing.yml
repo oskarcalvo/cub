@@ -5,6 +5,8 @@ entity.cub.collection:
     _title: 'Configure CUBs'
   requirements:
     _permission: 'administer cubs'
+  options:
+    _admin_route: TRUE
 
 entity.cub.add_form:
   path: '/admin/config/search/cub/add'
@@ -13,6 +15,8 @@ entity.cub.add_form:
     _title: 'Add CUBs'
   requirements:
     _permission: 'administer cubs'
+  options:
+    _admin_route: TRUE
 
 entity.cub.edit_form:
   path: '/admin/config/search/cub/{cub}'
@@ -21,11 +25,15 @@ entity.cub.edit_form:
     _title: 'Edit CUBs'
   requirements:
     _permission: 'administer cubs'
+  options:
+    _admin_route: TRUE
 
 entity.cub.delete_form:
   path: '/admin/config/search/cub/{cub}/delete'
   defaults:
-    _entity_form: 'cub.detele'
+    _entity_form: 'cub.delete'
     _title: 'Delete CUBs'
   requirements:
     _permission: 'administer cubs'
+  options:
+    _admin_route: TRUE

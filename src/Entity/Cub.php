@@ -22,7 +22,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   config_prefix = "cub",
- *   admin_permission = "administer site configuration",
+ *   admin_permission = "administer cubs",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",
@@ -56,9 +56,9 @@ class Cub extends ConfigEntityBase implements CubInterface {
   /**
    * Webesite URL 
    *
-   * @var url
+   * @var webUrl
    */
-  protected $url;
+  protected $webUrl;
   
   /**
    * Campaign Source
@@ -94,6 +94,10 @@ class Cub extends ConfigEntityBase implements CubInterface {
    * @var content
    */
   protected $content;
+  
+  public function webUrl(){
+    return $this->webUrl;
+  }
   
   /**
    * @return \Drupal\cub\Entity\source
