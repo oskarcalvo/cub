@@ -44,14 +44,14 @@ class Cub extends ConfigEntityBase implements CubInterface {
    *
    * @var string
    */
-  protected $id;
+  public $id;
 
   /**
    * The Cub label.
    *
    * @var string
    */
-  protected $label;
+  public $label;
 
   /**
    * Webesite URL 
@@ -95,6 +95,10 @@ class Cub extends ConfigEntityBase implements CubInterface {
    */
   protected $content;
   
+
+  /**
+   * @return \Drupal\cub\Entity\webUrl
+   */
   public function webUrl(){
     return $this->webUrl;
   }

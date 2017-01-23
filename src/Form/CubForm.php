@@ -130,6 +130,7 @@ class CubForm extends EntityForm {
           '%label' => $cub->label(),
         ]));
     }
+    \Drupal\cub\helpers\CubHelpers::cubCleanCache();
     $form_state->setRedirectUrl($cub->toUrl('collection'));
   }
   

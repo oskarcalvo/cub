@@ -37,7 +37,7 @@ class CubDeleteForm extends EntityConfirmFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->entity->delete();
-
+    \Drupal\cub\helpers\CubHelpers::cubCleanCache();
     drupal_set_message(
       $this->t('content @type: deleted @label.',
         [
