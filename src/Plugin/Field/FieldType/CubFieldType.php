@@ -2,12 +2,8 @@
 
 namespace Drupal\cub\Plugin\Field\FieldType;
 
-use Drupal\Component\Utility\Random;
-use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemBase;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
@@ -23,18 +19,6 @@ use Drupal\Core\TypedData\DataDefinition;
  */
 class CubFieldType extends FieldItemBase {
   
-  
-  /**
-   * {@inheritdoc}
-   */
-  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
-    $properties['value'] = DataDefinition::create('string')
-      ->setLabel(t('CUBs'))
-      ->setRequired(TRUE);
-    
-    return $properties;
-  }
-
   /**
    * {@inheritdoc}
    */
@@ -49,14 +33,33 @@ class CubFieldType extends FieldItemBase {
       ],
     ];
   }
-
-
+  
+  /**
+   * {@inheritdoc}
+   */
+  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+    $properties['value'] = DataDefinition::create('string')
+      ->setLabel(t('CUBs'))
+      ->setRequired(TRUE);
+    
+    return $properties;
+  }
+  
   /**
    * {@inheritdoc}
    */
   public function isEmpty() {
     $value = $this->get('value')->getValue();
     return $value === NULL || $value === '';
+  }
+  
+  /**
+   * {@inheritdoc}
+   */
+  public function preSave() {
+    parent::preSave();
+    $values = $this->value;
+  
   }
 
 }

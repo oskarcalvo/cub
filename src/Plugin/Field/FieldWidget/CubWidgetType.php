@@ -32,7 +32,6 @@ class CubWidgetType extends WidgetBase {
       '#title' => $this->t('Campaing url builder'),
       '#group' => 'advanced',
       '#weight' => 85,
-      
     ];
 
     foreach ($entidades as $key => $cub) {
@@ -46,19 +45,11 @@ class CubWidgetType extends WidgetBase {
         '#maxlength' => 255,
         '#default_value' => $cub['label'],
         '#description' => $this->t("Label for the CUB."),
-        '#required' => TRUE,
       ];
     
       $newfields['cub'][$key]['id'] = [
         '#type' => 'hidden',
         '#default_value' => $cub['id'],
-        '#machine_name' => [
-          'exists' => '\Drupal\cub\Entity\Cub::load',
-          //'replace_pattern' => '([^a-z0-9_]+)|(^custom$)',
-          //'error' => 'The machine-readable name must be unique, and can only contain lowercase letters, numbers, and underscores. Additionally, it can not be the reserved word "custom".',
-      
-        ],
-        '#disabled' => TRUE
       ];
       $newfields['cub'][$key]['webUrl'] = [
         '#type' => 'textfield',
@@ -110,9 +101,6 @@ class CubWidgetType extends WidgetBase {
         '#description' => $this->t("Use to differentiate ads."),
       ];
     }
-    
-    
-
     
     $element['value'] = $element + $newfields;
     
