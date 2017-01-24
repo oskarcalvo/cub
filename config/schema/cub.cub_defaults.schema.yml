@@ -1,4 +1,4 @@
-cub.cub.*:
+cub.cub_defaults.*:
   type: config_entity
   label: 'Cub config'
   mapping:
