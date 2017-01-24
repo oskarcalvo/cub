@@ -1,31 +1,7 @@
-cub.cub.*:
-  type: config_entity
-  label: 'Cub config'
+# Schema for cub
+field.value.cub:
+  type: mapping
+  label: 'Default value'
   mapping:
-    id:
+    value:
       type: string
-      label: 'ID'
-    label:
-      type: label
-      label: 'Label'
-    uuid:
-      type: string
-    webUrl:
-      type: string
-      label: ' Website Url'
-    source:
-      type: string
-      label: 'Campaign Source'
-    medium:
-      type: string
-      label: 'Campaign Medium'
-    name:
-      type: string
-      label: 'Campaign Name'
-    term:
-      type: string
-      label: 'Campaign Term'
-    content:
-      type: string
-      label: 'Campaign Content'
-      

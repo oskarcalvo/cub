@@ -1,7 +1,0 @@
-# Schema for cub
-field.value.cub:
-  type: mapping
-  label: 'Default value'
-  mapping:
-    value:
-      type: string
